@@ -1,53 +1,113 @@
-/* Style for the chatbot interface */
+/* General styles for body */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  background-color: #2E2E2E; /* Dark background */
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-#chatbox {
-    width: 400px;
-    height: 600px;
-    background-color: white;
-    border: 2px solid #ccc;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Header style (optional) */
+h1 {
+  text-align: center;
+  color: #9b59b6; /* Purple */
+  margin-top: 20px;
 }
 
-#chat-display {
-    height: 450px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-    padding-right: 5px;
+/* Chat container */
+#chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333; /* Dark background for the chat container */
+  border-radius: 10px;
+  border: 2px solid #9b59b6; /* Purple border */
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+/* Chat box styles */
+#chat-box {
+  height: 400px;
+  overflow-y: auto;
+  background-color: #1c1c1c; /* Very dark gray background */
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  border: 1px solid #9b59b6; /* Purple border for the chat box */
+  margin-bottom: 20px;
 }
 
-button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+/* Chat input field */
+#user-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444; /* Dark background */
+  color: white;
+  font-size: 16px;
 }
 
-button:hover {
-    background-color: #45a049;
+#user-input:focus {
+  outline: none;
+  border: 2px solid #f39c12; /* Gold color outline when focused */
 }
 
-#imageContainer img {
-    margin-top: 20px;
-    max-width: 100%;
-    border: 1px solid #ddd;
+/* Send button */
+#send-btn {
+  padding: 12px 20px;
+  background-color: #9b59b6; /* Purple background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#send-btn:hover {
+  background-color: #8e44ad; /* Slightly darker purple when hovered */
+}
+
+#send-btn:active {
+  background-color: #9b59b6; /* Keep purple on click */
+}
+
+/* Chat bubble style for user and bot messages */
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message.user {
+  background-color: #f39c12; /* Gold for user messages */
+  text-align: right;
+}
+
+.message.bot {
+  background-color: #9b59b6; /* Purple for bot messages */
+  text-align: left;
+}
+
+/* Scrollbar styles */
+#chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+  background-color: #9b59b6; /* Purple scrollbar thumb */
+  border-radius: 5px;
+}
+
+#chat-box::-webkit-scrollbar-track {
+  background-color: #333; /* Dark background for scrollbar track */
+}
+
+/* Footer section (optional) */
+footer {
+  text-align: center;
+  color: #f39c12; /* Gold color */
+  margin-top: 20px;
 }
