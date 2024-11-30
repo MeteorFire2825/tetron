@@ -1,0 +1,2 @@
+# tetron
+My Personal AI
