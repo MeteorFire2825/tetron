@@ -1,6 +1,10 @@
-run = "entrypoint = index.html"
+entrypoint="index.html"
+hidden=[".config"]
+modules = ["web:v2-20230623-0b7a606"]
+
 [nix]
-channel = "stable-24_05"
+channel = "stable-23_11"
 
 [deployment]
-run = ["sh", "-c", "entrypoint = index.html"]
+publicDir = "/"
+deploymentTarget = "static"
